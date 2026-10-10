@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 5: Box Sizing</title>
+    <style>
+        /* Aktifkan baris di bawah untuk lihat perbedaan: */
+        /* *, *::before, *::after { box-sizing: border-box; } */
+
+        .box {
+            width: 250px;
+            padding: 30px;
+            border: 8px solid;
+            margin: 20px auto;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .content-box-demo {
+            box-sizing: content-box;
+            background: #ffebee;
+            border-color: #c62828;
+        }
+
+        .border-box-demo {
+            box-sizing: border-box;
+            background: #e8f5e9;
+            border-color: #2e7d32;
+        }
+
+        .preview-area {
+            width: 300px;
+            background: #f5f5f5;
+            border: 2px dashed #999;
+            margin: 20px auto;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>content-box vs border-box</h1>
+    <p>Kedua kotak punya CSS sama: width 250px, padding 30px, border 8px. Tapi hasilnya beda!</p>
+    <div class="box content-box-demo">content-box</div>
+    <p style="text-align:center">Total: 250 + 60 + 16 = <strong>326px</strong></p>
+    <div class="box border-box-demo">border-box</div>
+    <p style="text-align:center">Total: <strong>250px</strong> (pas!)</p>
+    <div class="preview-area">
+        <p style="text-align:center">Kotak merah lebih lebar dari area 300px ini!</p>
+    </div>
+</body>
+
+</html>

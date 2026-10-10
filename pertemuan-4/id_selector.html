@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan id selector</title>
+    <style>
+        div, h1, h2, h3, p {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .merah {
+            background-color: red;
+        }
+
+        .hijau {
+            background-color: green;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        #satu {
+            background-color: yellow;
+        }
+
+        section p {
+            color: red;
+        }
+
+        div h1 {
+            color: blue
+        }
+
+        .brand {
+            color: red
+        }
+
+        .brand:hover {
+            color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="satu" class="merah">Kotak 1</div>
+    <div class="hijau">Kotak 2</div>
+    <div class="merah" id="" hre> Kotak 3</div>
+    <div class="hijau">Kotak 4</div>
+    <div class="orange">Kotak 5</div>
+
+
+    <section>
+        <h1 style="text-align: center;">Ini adalah judul</h1>
+        <p>ini adalah kalimat</p>
+
+        <p>ini kaliamt keadua</p>
+    </section>
+
+    <section>
+        <p>ini kaliamt di section yang berbeda</p>
+    </section>
+
+    <div>
+        <h2>Ini h2</h2>
+        <h3>ini h3</h3>
+        <h1>ini h1</h1>
+    </div>
+
+    <div>
+        <h1>Ini contoh h1 lainnya</h1>
+    </div>
+
+    <br><br>
+
+    <h2 class="brand">Bikin Software</h2>
+</body>
+
+</html>

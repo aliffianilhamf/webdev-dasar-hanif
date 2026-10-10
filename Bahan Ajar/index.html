@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Web Development</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-header">
+        <h1>WebDev</h1>
+        <button id="sidebarToggle" class="sidebar-close" aria-label="Tutup sidebar">&times;</button>
+      </div>
+      <nav id="moduleNav">
+        <!-- Module: HTML -->
+        <div class="module-group active">
+          <div class="module-title" data-module="html">
+            <span class="module-icon">&#60;&#62;</span>
+            <span>HTML</span>
+            <span class="module-badge">7 Bab</span>
+          </div>
+          <ul id="htmlChapterList" class="chapter-list"></ul>
+        </div>
+        <!-- Module: CSS -->
+        <div class="module-group">
+          <div class="module-title" data-module="css">
+            <span class="module-icon">#</span>
+            <span>CSS</span>
+            <span class="module-badge">18 Bab</span>
+          </div>
+          <ul id="cssChapterList" class="chapter-list"></ul>
+        </div>
+        <!-- Module: JS (locked) -->
+        <div class="module-group locked">
+          <div class="module-title">
+            <span class="module-icon">{ }</span>
+            <span>JavaScript</span>
+            <span class="lock-icon">&#128274;</span>
+          </div>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Overlay untuk mobile -->
+    <div id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+      <!-- Header -->
+      <header id="topBar">
+        <button id="menuBtn" aria-label="Buka menu">&#9776;</button>
+        <h2 id="chapterTitle">Pengenalan HTML & Struktur Dasar</h2>
+        <span id="chapterCounter">1 / 3</span>
+      </header>
+
+      <div id="contentArea">
+        <!-- Kolom Teori -->
+        <section id="theoryColumn">
+          <div id="theoryContent"></div>
+          
+          <div class="nav-buttons">
+            <button id="prevBtn" class="btn btn-outline" disabled>&#8592; Sebelumnya</button>
+            <button id="nextBtn" class="btn btn-primary">Selanjutnya &#8594;</button>
+          </div>
+        </section>
+
+        <!-- Kolom Playground -->
+        <section id="playgroundColumn">
+          <div class="playground-header">
+            <span class="playground-label">Code Editor</span>
+            <button id="resetBtn" class="btn btn-sm btn-outline">&#8635; Reset</button>
+          </div>
+          <div class="editor-wrapper">
+            <textarea id="codeEditor" spellcheck="false"></textarea>
+            <div class="line-numbers" id="lineNumbers"></div>
+          </div>
+          <div class="playground-header">
+            <span class="playground-label">Live Preview</span>
+          </div>
+          <div class="preview-wrapper">
+            <iframe id="previewFrame" sandbox="allow-scripts allow-same-origin"></iframe>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

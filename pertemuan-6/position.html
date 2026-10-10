@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position CSS Properties</title>
+    <style>
+        /* body {
+            padding-bottom: 1000px;
+        } */
+
+        .sticky-header {
+
+            background-color: aqua;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .relative-demo {
+            position: relative;
+            top: 20px;
+            left: 30px;
+            background-color: aquamarine;
+            padding: 10px;
+            border: 2px solid blue;
+        }
+
+        .card {
+            border: 1px solid black;
+            position: relative;
+            width: 300px;
+            margin: 20px auto;
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .badge {
+            position: absolute;
+            top: -10px;
+            right: -5px;
+            background-color: orange;
+            padding: 2px;
+            border-radius: 7px;
+
+        }
+
+        .absolute-demo {
+            background-color: aquamarine;
+            border: 1px solid orangered;
+            padding: 8px 16px;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+
+        .box-stack {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            margin: 40px auto;
+        }
+
+        .stack-item {
+            position: absolute;
+            width: 150px;
+            height: 100px;
+            padding: 12px;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        .stack-1 {
+            background-color: red;
+            z-index: 1;
+            top: 0;
+            left: 0;
+        }
+
+        .stack-2 {
+            background-color: orangered;
+            top: 30px;
+            left: 40px;
+            z-index: 2;
+        }
+
+        .stack-3 {
+            background-color: blue;
+            z-index: 2;
+            top: 60px;
+            left: 80px;
+        }
+
+        .fixed-demo {
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            background-color: blueviolet;
+            border-radius: 12px;
+            padding: 5px;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sticky-header">Aku Sticky - Scroll Dulu!</div>
+    <p>sada</p>
+    <p>adad</p>
+    <p>das</p>
+    <p>adasda</p>
+    <p>adasdas</p>
+    <p>adasd</p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <h1>Positioning & Z-index</h1>
+    <h3>Relative</h3>
+    <div class="relative-demo">Geser 20px kebawah, 30px ke kanan</div>
+    <h3>Absolute</h3>
+    <div class="card">
+        <div class="badge">Baru!!</div>
+        <h3>Card Judul</h3>
+        <p>Badge dipojok kanan atas pakai absolute</p>
+        <div class="a
+        bsolute-demo">Absolute dipojok kanan bawah</div>
+    </div>
+
+    <h3>z-index Stacking</h3>
+    <div class="box-stack">
+        <div class="stack-item stack-1">z-index: 1</div>
+        <div class="stack-item stack-2">z-index: 2</div>
+        <div class="stack-item stack-3">z-index: 3</div>
+    </div>
+
+    <div class="fixed-demo">Aku fixed — scroll aja!</div>
+</body>
+
+</html>
